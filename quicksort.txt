@@ -1,0 +1,21 @@
+void quickSort(int A[], int low, int high) {
+    if (low < high) {
+        int pivotIndex = partition(A, low, high);
+        quickSort(A, low, pivotIndex - 1);  // Sort left subarray
+        quickSort(A, pivotIndex + 1, high); // Sort right subarray
+    }
+}
+
+int partition(int A[], int low, int high) {
+    int pivot = A[high]; // Choosing the last element as pivot
+    int i = low - 1; // Index of smaller element
+
+    for (int j = low; j < high; j++) {
+        if (A[j] <= pivot) {
+            i++;
+            swap(A[i], A[j]); // Swap if element is smaller than pivot
+        }
+    }
+    swap(A[i + 1], A[high]); // Place pivot in correct position
+    return i + 1;
+}
