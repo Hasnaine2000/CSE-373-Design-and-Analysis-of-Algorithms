@@ -1,8 +1,8 @@
 void quickSort(int A[], int low, int high) {
     if (low < high) {
-        int pivotIndex = partition(A, low, high);
-        quickSort(A, low, pivotIndex - 1);  // Sort left subarray
-        quickSort(A, pivotIndex + 1, high); // Sort right subarray
+        int loc = partition(A, low, high);
+        quickSort(A, low, loc - 1);  // Sort left subarray
+        quickSort(A, loc + 1, high); // Sort right subarray
     }
 }
 
