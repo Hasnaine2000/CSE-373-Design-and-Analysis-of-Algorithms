@@ -14,7 +14,7 @@ Insert(Arr,n,value){ //max heap
 }
 Delete(Arr, n){
     swap(Arr[0],Arr[n])
-    heapify (Arr,n,n-1)
+    heapify (Arr,n,1)
 }
 
 Heapify(Arr, n, i){
@@ -35,7 +35,7 @@ Main(){
         heapify(Arr, n, i)
     }
     for(i=n,i>=1,i--){
-        swap(Arr[1], Arr[n])
-        heapify(arr, n-1, 1)
+        swap(Arr[1], Arr[i])
+        heapify(arr, i, 1)
     }
 }
