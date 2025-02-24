@@ -1,0 +1,30 @@
+function(Arr, low, high){
+    if(low<high){
+        i=low
+        j=high
+        pivot = arr[low]
+While(i<j){
+     while(Arr[i]<=pivot && i<high-1){
+            i++
+        }
+        while(Arr[j]>pivot && j>low+1){
+            j--
+        }
+        if(i<j)
+        swap(Arr[i],Arr[j])
+
+}
+swap(Arr[low],Arr[j])
+return j
+       
+    }
+}
+
+
+QuickSort(Arr, low, High){
+    if(low<high){
+        loc = function(Arr, low, high)
+        QuickSort(Arr, low, loc-1)
+        QuickSort(Arr, loc+1, high)
+    }
+}
