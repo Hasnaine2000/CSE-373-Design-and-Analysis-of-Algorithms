@@ -14,16 +14,16 @@ Insert(Arr,n,value){ //max heap
 }
 Delete(Arr, n){
     swap(Arr[0],Arr[n])
-    heapify (Arr,n,1)
+    heapify (Arr,n-1,1)
 }
 
 Heapify(Arr, n, i){
     largest = i
     left = 2*i
     right = 2*i+1
-     if(left<n && Arr[left]>Arr[largest])
+     if(left<=n && Arr[left]>Arr[largest])
      largest = left
-     if(right<n && Arr[right]>Arr[largest])
+     if(right<=n && Arr[right]>Arr[largest])
      largest = right
      if(largest != i)
      swap(Arr[largest], Arr[i])
@@ -36,6 +36,6 @@ Main(){
     }
     for(i=n,i>=1,i--){
         swap(Arr[1], Arr[i])
-        heapify(arr, i, 1)
+        heapify(arr, i-1, 1)
     }
 }
