@@ -1,0 +1,28 @@
+fucntion(arr, low, high){
+    pivot = arr [low]
+    i = low
+    j= high
+while(i<j){
+    while(i<high-1 && arr[i]<=pivot){
+        i++
+    }
+    while(j>low+1 && arr[j]>pivot){
+        j--
+    }
+    if(i<j){
+        swap(arr[i],arr[j])
+    }
+
+}
+
+swap(arr[low], arr[j])
+return j
+}
+
+QuickSort(arr, low, high){
+    if(low<high){
+        loc = function(arr, low, high)
+        QuickSort(arr, low, loc-1)
+        QuickSort(arr, loc+1, high)
+    }
+}
