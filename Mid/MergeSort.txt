@@ -1,0 +1,38 @@
+mergesort(Arr, lb, ub ){
+    if(lb<ub){
+        mid = lb+ub /2;
+        mergesort(Arr, lb, mid)
+        mergesort(Arr, mid+1, ub)
+        merge(Arr, lb, mid, ub)
+    }
+}
+merge(Arr, lb, mid, ub){
+    i = lb
+    j = mid+1
+    l = 0
+    size = ub-lb+1
+    Arr new B[size]
+
+    while (i<=mid && j<=ub){
+        if(Arr[i] <= Arr[j]){
+            B[l]= Arr[i]
+            l++, i++
+        }
+        else{
+            B[l]= Arr[j]
+            l++, j++
+        }
+    }
+    if(i<=mid){
+        while(i<=mid){
+            B[l]= Arr[i]
+            l++, i++
+        }
+    }
+    else if(j<=ub){
+        while(j<=ub){
+            B[l]= Arr[j]
+            l++, j++
+        }
+    }
+}
