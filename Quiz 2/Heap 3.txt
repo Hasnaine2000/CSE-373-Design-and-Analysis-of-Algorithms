@@ -1,0 +1,37 @@
+Insert(Arr, n, value){
+    n = n+1 
+    Arr[n]= value
+    i=n
+    while(i>=1){
+        p= i/2
+        if(Arr[p]<Arr[i]){
+            swap(Arr[p], Arr[i])
+            i=p
+        }
+    }
+}
+
+heapify(Arr, n, i){
+    smallest = i
+    left = 2*i
+    right = 2*i+1
+
+    if(Arr[left]<Arr[smallest] && left<=n)
+    smallest = left
+    if(Arr[right]<Arr[smallest] && right <=n)
+    smallest = right
+    if (smallest!=i){
+        swap(Arr[i], Arr[smallest])
+        heapify(Arr, n, smallest)
+    }
+}
+
+Main(){
+    for(i=n/2; i>=1;i--){
+        heapify(Arr, n, i)
+    }
+    for(i=n; i>=1; i--){
+        swap(Arr[1], Arr[n])
+        heapify(Arr, i-1, 1)
+    }
+}
