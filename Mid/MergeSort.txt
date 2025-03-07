@@ -36,3 +36,5 @@ merge(Arr, lb, mid, ub){
         }
     }
 }
+
+Joghonno hoise MID 
