@@ -15,3 +15,6 @@ int main() {
     std::cout << "Number of paths: " << f(i, j) << std::endl;
     return 0;
 }
+
+//min sum problems will be similar to this but just add " up = a[i][j] + f(i - 1, j);  and return the min of up and left 
+//if the problem contains obstancles then just check if the cell is not an obstacle before calling the function and base case if (i < 0 || j < 0) return INT_MAX;
