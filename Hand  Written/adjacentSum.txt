@@ -1,0 +1,17 @@
+f(i, arr){
+    if(i==0) return arr[0]
+    if(i<0) return 0;
+    not_pick = 0 + f(i-1, arr)
+    pick = arr [i] + f(i-2, arr)
+
+    return min(not_pick, pick)
+}
+
+
+
+f(i, arr){
+if(i==0) return arr[0]
+if (i<0) return 0
+not_pick = 0 + f(i-1, arr)
+pick = arr[i] + f(i-2, arr)
+return max(pick, not_pick)

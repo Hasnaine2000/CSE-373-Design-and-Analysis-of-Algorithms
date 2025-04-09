@@ -1,0 +1,33 @@
+f(i, target, coin){
+    if(i==0){
+        if(target%coin[i] == 0){
+            return target / coin [0]
+        }else
+        return INT_MAX;
+    }
+     not pick = 0 + f(i-1, target, coin)
+     pick = INT_MAX
+    if(coin[i]<=target){
+        pick = 1 + f(i, target - coin[i], coin)
+    }
+    return min (pick, not pick)
+}
+
+
+f(i, target, coins){
+	if(i==0){
+		if(target%coins[i] == 0){
+			return target / coins[i];
+					}
+		}
+		not_pick = 0 + f(i-1, target, coins)
+		pick = INT_MAX
+	if(coins[i]<=target){
+			pick = 1 + f(i, target- coins[i], coins)		
+			}
+		return min (pick, not_pick)
+			
+
+
+
+
