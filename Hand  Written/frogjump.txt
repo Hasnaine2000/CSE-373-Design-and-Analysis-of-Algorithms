@@ -1,9 +1,9 @@
-f(i,a){
-    if(i==0) return 0;
-    left = f(i-1)+abs ( a[i] - a[i-1] )
-    right = INT_MAX
-    if(i>1){
-        right = f(i-2)+ abs (a[i]- a[i-2])
-    } 
-    return min (left, right)
+f(i, a){
+    if(i == 0) return 0;
+    left = f(i-1) + abs(a[i] - a[i-1]);
+    right = INT_MAX;
+    if(i > 1){
+        right = f(i-2) + abs(a[i] - a[i-2]);
+    }
+    return min(left, right);
 }

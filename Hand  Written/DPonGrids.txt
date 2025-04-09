@@ -1,54 +1,42 @@
-f(i,j){
-    if(i==0 && j==0) return 1;
-    if(i<0 || j<0) return 0;
+f(i, j){
+    if(i == 0 && j == 0) return 1;
+    if(i < 0 || j < 0) return 0;
 
-    left = f(i-1, j)
-    right = f(i, j-1)
+    left = f(i-1, j);
+    right = f(i, j-1);
 
-    return left +right
-
+    return left + right;
 }
 
 f(i, j){
-	if(i==0 && j==0) return 1
-	if(i<0 || j< 0) return 0
+    if(i == 0 && j == 0) return 1;
+    if(i < 0 || j < 0) return 0;
 
-	left = f(i-1, j)
-	right = f(i, j-1)
-	
-	return left + right;
+    left = f(i-1, j);
+    right = f(i, j-1);
+
+    return left + right;
 }
-
 
 // DP on grids obstacle
-
 f(i, j){
-	if(arr[i][j] == 0) return 0 
-	if(i==0 && j==0) return 1
-	if(i<0 || j< 0) return 0
+    if(arr[i][j] == 0) return 0;
+    if(i == 0 && j == 0) return 1;
+    if(i < 0 || j < 0) return 0;
 
-	left = f(i-1, j)
-	right = f(i, j-1)
-	
-	return left + right;
+    left = f(i-1, j);
+    right = f(i, j-1);
+
+    return left + right;
 }
 
 // DP on grids sum of grids minimum
-
-
 f(i, j){
-	if(i==0 && j==0) return 1
-	if(i<0 || j< 0) return return INT_MAX
-	
+    if(i == 0 && j == 0) return arr[i][j]; // Fixed return value
+    if(i < 0 || j < 0) return INT_MAX;
 
-	left = arr[i][j] + f(i-1, j)
-	right = arr[i][j] + f(i, j-1)
-	
-	return min(left, right)
+    left = arr[i][j] + f(i-1, j);
+    right = arr[i][j] + f(i, j-1);
+
+    return min(left, right);
 }
-
-
-
-
-
-

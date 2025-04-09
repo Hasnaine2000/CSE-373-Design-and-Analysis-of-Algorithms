@@ -1,25 +1,20 @@
 f(i, last, task){
-    if(i==0){
+    if(i == 0){
         maxi = 0;
-        for(j=0;j<3; j++){
-            if(j!=last){
-                maxi = max (maxi, task[0][j])
-
+        for(j = 0; j < 3; j++){
+            if(j != last){
+                maxi = max(maxi, task[0][j]);
             }
         }
         return maxi;
     }
-    maxi = 0 ;
+    maxi = 0;
 
-    for(j=0; j<3; j++){
-        if (j!=last){
-            points = f(i-1, j, task)+ task[i][j]
-            maxi = max(maxi, points)
+    for(j = 0; j < 3; j++){
+        if(j != last){
+            points = f(i-1, j, task) + task[i][j];
+            maxi = max(maxi, points);
         }
-        
     }
     return maxi;
-
-
-
 }
